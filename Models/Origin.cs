@@ -1,4 +1,4 @@
-namespace Doan_ASP.NET_MVC.Models
+﻿namespace Doan_ASP.NET_MVC.Models
 {
     using System;
     using System.Collections.Generic;
@@ -20,6 +20,7 @@ namespace Doan_ASP.NET_MVC.Models
         public int origin_id { get; set; }
         public int category1;
         [StringLength(100)]
+        [Display(Name ="Xuất xứ")]
         public string origin_name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

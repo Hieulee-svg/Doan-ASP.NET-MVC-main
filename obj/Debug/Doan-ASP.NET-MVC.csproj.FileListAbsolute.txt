@@ -232,7 +232,6 @@ C:\Users\ASUS\Downloads\Compressed\Doan-ASP.NET-MVC-main\bin\Microsoft.Owin.Secu
 C:\Users\ASUS\Downloads\Compressed\Doan-ASP.NET-MVC-main\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\ASUS\Downloads\Compressed\Doan-ASP.NET-MVC-main\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\ASUS\Downloads\Compressed\Doan-ASP.NET-MVC-main\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\ASUS\Downloads\Compressed\Doan-ASP.NET-MVC-main\obj\Debug\Doan-ASP.NET-MVC.csproj.AssemblyReference.cache
 C:\Users\ASUS\Downloads\Compressed\Doan-ASP.NET-MVC-main\obj\Debug\Doan-ASP.NET-MVC.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\Downloads\Compressed\Doan-ASP.NET-MVC-main\obj\Debug\Doan-ASP.NET-MVC.csproj.CopyComplete
 C:\Users\ASUS\Downloads\Compressed\Doan-ASP.NET-MVC-main\obj\Debug\Doan-ASP.NET-MVC.dll

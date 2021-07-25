@@ -1,4 +1,4 @@
-namespace Doan_ASP.NET_MVC.Models
+﻿namespace Doan_ASP.NET_MVC.Models
 {
     using System;
     using System.Collections.Generic;
@@ -23,27 +23,31 @@ namespace Doan_ASP.NET_MVC.Models
 
         [Required]
         [StringLength(255)]
+        [Display(Name ="Sản phẩm")]
         public string product_name { get; set; }
 
         [Required]
         [StringLength(255)]
+        [Display(Name ="Hình ảnh")]
         public string product_image { get; set; }
-
+        [Display(Name = "Giá")]
         public long product_price { get; set; }
 
         [Column(TypeName = "ntext")]
         [Required]
+        [Display(Name = "Mô tả")]
         public string product_description { get; set; }
-
+        [Display(Name = "Số lượng")]
         public int product_quantity { get; set; }
 
         public int brand_id { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Size")]
         public string product_size { get; set; }
 
         public int? origin_id { get; set; }
-
+        [Display(Name = "SP nổi bật")]
         public bool hot_product { get; set; }
 
         public int? sale_id { get; set; }
@@ -61,6 +65,7 @@ namespace Doan_ASP.NET_MVC.Models
         public virtual Origin Origin { get; set; }
 
         public virtual sale sale { get; set; }
+        [Display(Name = "Giá sau giảm")]
         public long productsale
         {
             get

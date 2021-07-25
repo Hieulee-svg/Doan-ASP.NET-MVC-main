@@ -1,4 +1,4 @@
-namespace Doan_ASP.NET_MVC.Models
+﻿namespace Doan_ASP.NET_MVC.Models
 {
     using System;
     using System.Collections.Generic;
@@ -20,6 +20,7 @@ namespace Doan_ASP.NET_MVC.Models
 
         [Required]
         [StringLength(255)]
+        [Display(Name = "Danh mục")]
         public string category_name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
