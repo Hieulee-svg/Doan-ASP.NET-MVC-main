@@ -85,6 +85,7 @@ namespace Doan_ASP.NET_MVC.Controllers
                 case SignInStatus.RequiresVerification:
                     return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
+                    
                 default:
                     ModelState.AddModelError("", "Đăng nhập thất bại.");
                     return View(model);
@@ -151,10 +152,11 @@ namespace Doan_ASP.NET_MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Name = model.Name };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Name = model.Name, PhoneNumber = model.Phone };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
@@ -422,7 +424,14 @@ namespace Doan_ASP.NET_MVC.Controllers
 
             base.Dispose(disposing);
         }
-
+        public ActionResult getuser()
+        {
+            ShopModelContext db = new ShopModelContext();
+            var list = from u in db.AspNetUsers
+                       select u;
+         
+            return View(list);
+        }
         #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";

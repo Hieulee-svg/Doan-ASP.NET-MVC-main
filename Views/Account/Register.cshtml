@@ -17,13 +17,18 @@
                         <div class="row">
                             <div class="col-md-12 mb-20">
                                 @Html.LabelFor(m => m.Name)
-                                @Html.TextBoxFor(m => m.Name, new { @class = "mb-0" , placeholder = "Tên của bạn"})
+                                @Html.TextBoxFor(m => m.Name, new { @class = "mb-0", placeholder = "Tên của bạn" })
                                 @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
                             </div>
                             <div class="col-md-12 mb-20">
                                 @Html.LabelFor(m => m.Email)
                                 @Html.TextBoxFor(m => m.Email, new { @class = "mb-0", placeholder = "Email" })
                                 @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-12 mb-20">
+                                @Html.LabelFor(m => m.Phone)
+                                @Html.TextBoxFor(m => m.Phone, new { @class = "mb-0", placeholder = "Số điện thoại" })
+                                @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
                             </div>
                             <div class="col-md-6 mb-20">
                                 @Html.LabelFor(m => m.Password)

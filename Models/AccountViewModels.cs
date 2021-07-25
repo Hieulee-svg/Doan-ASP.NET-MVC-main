@@ -48,39 +48,45 @@ namespace Doan_ASP.NET_MVC.Models
 
     public class LoginViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Email không được để trống")]
+        [EmailAddress(ErrorMessage = "Email không đúng định dạng!")]
         [Display(Name = "Email")]
-        [EmailAddress]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Mật khẩu không được để trống")]
         [DataType(DataType.Password)]
         [Display(Name = "Mật khẩu")]
         public string Password { get; set; }
 
-        [Display(Name = "Lưu tài khoản?")]
+        [Display(Name = "Lưu tài khoản")]
         public bool RememberMe { get; set; }
     }
 
     public class RegisterViewModel
     {
-        [Required]
-        [Display(Name = "Tên của bạn")]
+        [Required(ErrorMessage ="Tên không được để trống")]
+        [Display(Name = "Họ Tên")]
         public string Name { get; set; }
 
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "Email không được để trống")]
+        [EmailAddress(ErrorMessage ="Email không đúng định dạng!")]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Số điện thoại không được để trống")]
+        [Phone(ErrorMessage ="Số điện thoại phải có 10 hoặc 11 số!")]
+        [Display(Name = "Số điện thoại")]
+        public string Phone { get; set; }
+
+        [Required(ErrorMessage = "Mật khẩu không được để trống")]
         [StringLength(100, ErrorMessage = "Mật khẩu phải có ít nhất 6 ký tự và phải chứa ký tự đặc biêt + số(vd:hoang123!...)", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Mật khẩu")]
         public string Password { get; set; }
 
+
         [DataType(DataType.Password)]
-        [Display(Name = "Xác nhật mật khẩu")]
+        [Display(Name = "Nhập lại mật khẩu")]
         [Compare("Password", ErrorMessage = "Mật khẩu xác nhập và mật khẩu không giống nhau.")]
         public string ConfirmPassword { get; set; }
     }

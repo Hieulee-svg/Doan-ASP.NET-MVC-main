@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Doan_ASP.NET_MVC.Models.AspNetUser>
+
+@{
+    ViewBag.Title = "getuser";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                       
+                        <table id="example1" class="table table-bordered table-striped" method="Get">
+                            <thead>
+                                <tr>
+                                    <th>
+
+
+                                        @Html.DisplayNameFor(model => model.Email)
+                                    </th>
+                                    <th>
+
+                                        @Html.DisplayNameFor(model => model.Name)
+                                    </th>
+
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.PhoneNumber)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.Role)
+                                    </td>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Email)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Name)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PhoneNumber)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Role)
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                           
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
